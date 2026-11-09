@@ -1,0 +1,19 @@
+:root{--or:#F97316;--navy:#1F2937;--ink:#1D1D1F;--grey:#6E6E73;--light:#F5F5F7;--black:#000}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;color:var(--ink);background:#000;-webkit-font-smoothing:antialiased}
+.d{font-family:'Inter Display',Inter,sans-serif;font-weight:700;letter-spacing:-0.035em;line-height:1.04}
+.eyebrow{font-family:'Inter Display',Inter;font-weight:600;font-size:30px;color:var(--or);letter-spacing:-0.01em}
+.sub{font-family:'Inter Display',Inter;font-weight:500;color:var(--grey);letter-spacing:-0.015em;line-height:1.3}
+/* phone */
+.phone{position:relative;background:#111;border-radius:96px;padding:18px;box-shadow:0 0 0 3px #3a3a3c inset,0 60px 120px -30px rgba(0,0,0,.45),0 30px 60px -30px rgba(0,0,0,.35)}
+.screen{position:relative;width:100%;height:100%;border-radius:80px;overflow:hidden;background:#F6F6F8;padding:120px 34px 40px;display:flex;flex-direction:column;gap:22px;font-family:Inter}
+.island{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:170px;height:50px;border-radius:30px;background:#000;z-index:2}
+.sbar{position:absolute;top:36px;left:58px;right:52px;display:flex;justify-content:space-between;font-weight:600;font-size:28px;color:#111}
+.apptitle{font-family:'Inter Display';font-weight:700;font-size:52px;letter-spacing:-0.03em}
+.row{background:#fff;border-radius:28px;padding:26px 28px;display:flex;align-items:center;gap:20px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.av{width:72px;height:72px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#fff}
+.nm{font-weight:600;font-size:32px}.mt{font-size:24px;color:var(--grey);margin-top:4px}
+.chip{margin-left:auto;border-radius:999px;padding:10px 20px;font-weight:600;font-size:24px;white-space:nowrap}
+.ok{background:#E6F6EC;color:#166534}.warn{background:#FEF3C7;color:#92400E}.bad{background:#FEE2E2;color:#B91C1C}
+.btn{height:100px;border-radius:28px;background:var(--or);color:var(--navy);font-weight:700;font-size:36px;display:flex;align-items:center;justify-content:center}
+.logo{display:inline-flex;align-items:center;gap:18px;font-family:'Inter Display';font-weight:700;letter-spacing:-0.03em}

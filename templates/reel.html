@@ -1,0 +1,65 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+.sc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;color:#F5F5F7}
+.big{font-size:150px}
+.q{font-size:96px;color:#F5F5F7}
+#phoneWrap{position:absolute;left:250px;top:560px;width:580px;height:1180px}
+#phoneWrap .phone{width:100%;height:100%}
+.glow{position:absolute;width:1100px;height:1100px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.30),transparent 62%)}
+</style></head><body>
+
+<div class="sc" id="a"><div class="d big" id="a1">6 PM.</div><div class="d big" id="a2" style="color:#86868B">Rush hour.</div></div>
+
+<div class="sc" id="b">
+  <div class="d q" id="b1">Which page?</div>
+  <div class="d q" id="b2" style="margin-top:20px">Has he paid?</div>
+  <div class="d q" id="b3" style="margin-top:20px">Still active?</div>
+  <div class="sub" id="b4" style="font-size:44px;margin-top:70px;color:#86868B">Sound familiar?</div>
+</div>
+
+<div class="sc" id="c" style="justify-content:flex-start">
+  <div class="glow" style="top:520px"></div>
+  <div class="d" id="c1" style="font-size:104px;margin-top:220px;position:relative">There’s a<br>faster way.</div>
+  <div id="phoneWrap"><div class="phone"><div class="island"></div><div class="screen">
+    <div class="sbar"><span>6:02</span><span>●●●</span></div>
+    <div class="apptitle" style="text-align:left;color:#1D1D1F">Attendance</div>
+    <div class="row" style="border:3px solid var(--or);font-size:34px;font-weight:600;color:#1D1D1F;height:104px"><span id="typed"></span><span id="caret" style="width:3px;height:42px;background:var(--or);margin-left:-16px"></span></div>
+    <div id="card" style="display:flex;flex-direction:column;gap:22px">
+      <div class="row" style="color:#1D1D1F"><div class="av" style="background:#30D158">RK</div><div style="text-align:left"><div class="nm">Ravi Kumar</div><div class="mt">ID 1042 · Monthly</div></div><span class="chip ok">Active</span></div>
+      <div class="btn" id="btn">Check in</div>
+    </div>
+    <div class="mt" style="margin-top:20px;font-size:26px;text-align:left">Recent</div>
+    <div class="row" style="color:#1D1D1F"><div class="av" style="background:#0A84FF">AK</div><div style="text-align:left"><div class="nm">Arun K</div><div class="mt">5:58 PM</div></div></div>
+    <div class="row" style="color:#1D1D1F"><div class="av" style="background:#BF5AF2">PS</div><div style="text-align:left"><div class="nm">Priya S</div><div class="mt">5:51 PM</div></div></div>
+  </div></div></div>
+</div>
+
+<div class="sc" id="d">
+  <div class="glow" style="top:400px"></div>
+  <div class="logo" id="d0" style="font-size:72px;position:relative"><svg width="108" height="108" viewBox="0 0 500 500" aria-hidden="true"><rect x="40" y="50" width="425" height="75" rx="37" fill="#F5F5F7"/><path d="M85 435 L245 198 L430 198" fill="none" stroke="#F97316" stroke-width="78" stroke-linecap="round" stroke-linejoin="round"/></svg>Fitrack</div>
+  <div class="d" id="d1" style="font-size:116px;margin-top:70px;position:relative">Notebook venam.<br><span style="color:var(--or)">Fitrack podhum.</span></div>
+  <div class="sub" id="d2" style="font-size:46px;margin-top:44px;color:#A1A1A6;position:relative">Your gym. In your pocket.</div>
+  <div id="d3" style="margin-top:80px;font-family:'Inter Display';font-weight:600;font-size:48px;color:var(--or);position:relative">fitrack.in ›</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-cl(x),3);
+function inn(el,t0,dur=0.6){const p=ease((window.T-t0)/dur);el.style.opacity=p;el.style.transform=`translateY(${(1-p)*40}px) scale(${0.96+0.04*p})`;el.style.filter=`blur(${(1-p)*14}px)`;}
+function scene(el,a,b){const t=window.T;const p=Math.min(ease((t-a)/0.35),b>=15?1:ease((b-t)/0.35));el.style.opacity=p;}
+window.render=function(t){window.T=t;
+  scene($('a'),0,2.6); inn($('a1'),0.1); inn($('a2'),0.9);
+  scene($('b'),2.6,5.6); inn($('b1'),2.8,0.5); inn($('b2'),3.4,0.5); inn($('b3'),4.0,0.5); inn($('b4'),4.7,0.5);
+  scene($('c'),5.6,11.8); inn($('c1'),5.7);
+  const pp=ease((t-6.2)/1.0); $('phoneWrap').style.transform=`translateY(${(1-pp)*700}px)`;
+  const word='Ravi', n=Math.floor(cl((t-7.4)/0.9)*4.99); $('typed').textContent=word.slice(0,n);
+  $('caret').style.opacity=(Math.floor(t*3)%2)?1:0.15;
+  const cp=ease((t-8.5)/0.45); $('card').style.opacity=cp; $('card').style.transform=`translateY(${(1-cp)*30}px)`;
+  const b=$('btn'), pressed=t>=9.5&&t<9.75, done=t>=9.75;
+  b.style.transform=pressed?'scale(.95)':'scale(1)'; b.style.background=done?'#16A34A':'#F97316'; b.style.color=done?'#fff':'#1F2937';
+  b.textContent=done?'✓ Checked in':'Check in';
+  scene($('d'),11.8,15); inn($('d0'),11.9); inn($('d1'),12.4,0.7); inn($('d2'),13.1); inn($('d3'),13.5);
+};
+render(0);
+</script></body></html>
