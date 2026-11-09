@@ -1,0 +1,19 @@
+{
+  "week": 1,
+  "monday": {
+    "type": "carousel",
+    "files": ["1-monday-carousel-1.jpg", "1-monday-carousel-2.jpg", "1-monday-carousel-3.jpg", "1-monday-carousel-4.jpg", "1-monday-carousel-5.jpg", "1-monday-carousel-6.jpg"],
+    "caption": "The notebook had a good run.\n\nBut expired memberships slip by, fees stay pending, and month-end takes your whole Sunday.\n\nFitrack puts members, payments, attendance and reports in one app, on your phone.\n\nSwipe → then tell us: which one costs you the most?\n\nfitrack.in\n\n#gymowner #gymmanagement #fitnessbusiness #gymsoftware #smallbusinessindia #chennaigym #fitrack"
+  },
+  "wednesday": {
+    "type": "reel",
+    "files": ["2-wednesday-reel.mp4"],
+    "thumb_offset_ms": 13000,
+    "caption": "6 PM rush. Member waiting. Notebook-la page theduringa… 😅\n\nName type pannunga, Check in tap pannunga. Mudinjidum.\nNotebook venam. Fitrack podhum.\n\nfitrack.in\n\n#gymowner #gymreels #gymmanagement #tamilnadugym #chennaigym #fitrack"
+  },
+  "friday": {
+    "type": "image",
+    "files": ["3-friday-post.jpg"],
+    "caption": "Quick question for gym owners 👇\nHow do you track attendance today?\n\nA: Paper register\nB: Excel sheet\nC: An app\nD: We don't track it\n\nComment your letter. No judgement, every gym starts somewhere.\n\n#gymowner #gymbusiness #fitnessindia #gymmanagement #fitrack"
+  }
+}
