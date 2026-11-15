@@ -1,0 +1,30 @@
+{
+  "week": 2,
+  "monday": {
+    "type": "carousel",
+    "files": [
+      "1-monday-carousel-1.jpg",
+      "1-monday-carousel-2.jpg",
+      "1-monday-carousel-3.jpg",
+      "1-monday-carousel-4.jpg",
+      "1-monday-carousel-5.jpg",
+      "1-monday-carousel-6.jpg"
+    ],
+    "caption": "Most members don't quit. Their plan just runs out and nobody notices.\n\nFitrack shows who's Expiring before the date passes, so you can renew them at the desk, or freeze their plan if they're taking a break.\n\nSwipe → then tell us: how do you find out a membership has expired today?\n\nfitrack.in\n\n#gymowner #gymmanagement #gymrenewals #fitnessbusiness #gymsoftware #smallbusinessindia #fitrack"
+  },
+  "wednesday": {
+    "type": "reel",
+    "files": [
+      "2-wednesday-reel.mp4"
+    ],
+    "thumb_offset_ms": 14500,
+    "caption": "₹2,400 pending since last month. Sound familiar?\n\nOpen the member. Tap Collect due. Confirm UPI. Done, and the due is cleared on their profile.\n\nHow many pending dues are sitting in your gym right now?\n\nfitrack.in\n\n#gymowner #gymreels #gymmanagement #pendingfees #upi #fitnessbusiness #fitrack"
+  },
+  "friday": {
+    "type": "image",
+    "files": [
+      "3-friday-post.jpg"
+    ],
+    "caption": "Gym owners, be honest 👇\nWhat's your biggest front-desk headache?\n\nA: Chasing pending fees\nB: The 6 PM rush\nC: Missed renewals\nD: Month-end accounts\n\nComment your letter. We read every one.\n\nfitrack.in\n\n#gymowner #gymbusiness #fitnessindia #gymmanagement #frontdesk #fitrack"
+  }
+}
